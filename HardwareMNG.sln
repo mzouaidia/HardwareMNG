@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardwareMNG.App", "HardwareMNG.App\HardwareMNG.App.csproj", "{01335C80-B023-4460-9D61-DB689AFF51EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HardwareMNG.Api", "HardwareMNG.Api\HardwareMNG.Api.csproj", "{40F1616E-AB58-48FD-8990-CEC8E8658BAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01335C80-B023-4460-9D61-DB689AFF51EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01335C80-B023-4460-9D61-DB689AFF51EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01335C80-B023-4460-9D61-DB689AFF51EA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{01335C80-B023-4460-9D61-DB689AFF51EA}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{40F1616E-AB58-48FD-8990-CEC8E8658BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40F1616E-AB58-48FD-8990-CEC8E8658BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40F1616E-AB58-48FD-8990-CEC8E8658BAD}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{40F1616E-AB58-48FD-8990-CEC8E8658BAD}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {755D89F1-CE66-4097-B67A-82791BE44E15}
+	EndGlobalSection
+EndGlobal
