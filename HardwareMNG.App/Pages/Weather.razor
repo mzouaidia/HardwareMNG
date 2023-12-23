@@ -1,6 +1,7 @@
 ﻿@page "/weather"
-@using System.Text.Json
+@using Microsoft.AspNetCore.Components.WebAssembly.Hosting
 @inject HttpClient Http
+@inject IConfiguration Conf
 
 <PageTitle>Weather</PageTitle>
 
@@ -40,14 +41,21 @@ else
 }
 
 @code {
+    private string? _apiUrl = string.Empty;
     private WeatherForecast[]? _forecasts;
+
+    [Inject]
+    public required IWebAssemblyHostEnvironment Env { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         // var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:8080/WeatherForecast");
         // request.SetBrowserRequestMode(BrowserRequestMode.NoCors);
         // await Http.SendAsync(request);
-        _forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("https://localhost:8080/WeatherForecast");
+
+        _apiUrl = Env.IsDevelopment() ? "https://localhost:8080/WeatherForecast" : Conf.GetConnectionString("ApiUrl");
+        
+        _forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>(_apiUrl);
     }
 
     public class WeatherForecast
