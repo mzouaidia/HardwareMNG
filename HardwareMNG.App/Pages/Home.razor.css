@@ -1,0 +1,11 @@
+﻿.widgets {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    /*justify-content: center;*/
+    -o-justify-content: center;
+    -webkit-justify-content: center;
+}

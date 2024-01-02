@@ -1,4 +1,5 @@
 ﻿@page "/"
+@using HardwareMNG.App.Components
 
 <PageTitle>Home</PageTitle>
 
@@ -7,5 +8,12 @@
 <div class="alert alert-warning" role="alert">
     Before authentication will function correctly, you must configure your provider details in <code>Program.cs</code>
 </div>
-
 Welcome to your new app.
+<div class="widgets">
+    <CardInfo Count="120" Title="All Users" />
+    <CardInfo Count="100" Title="Active Users" TypeInfo="A" />
+    <CardInfo Count="20" Title="Deactive Users" TypeInfo="D" />
+    <CardInfo Title="Testing" />
+    <CardInfo Count="5" TypeInfo="A" />
+    <CardInfo TypeInfo="D" />
+</div>

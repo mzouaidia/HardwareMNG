@@ -1,51 +1,20 @@
-﻿@page "/weather"
-@* 
-@inject HttpClient Http
-@inject IConfiguration Conf
- *@
-<PageTitle>Weather</PageTitle>
+﻿using System.Net.Http.Json;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.AspNetCore.Components;
 
-<h1>Weather</h1>
+namespace HardwareMNG.App.Pages;
 
-<p>This component demonstrates fetching data from the server.</p>
-
-@if (_forecasts == null)
+public partial class Weather/*(HttpClient http, IConfiguration conf)*/
 {
-    <p>
-        <em>Loading...</em>
-    </p>
-}
-else
-{
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var forecast in _forecasts)
-        {
-            <tr>
-                <td>@forecast.Date.ToShortDateString()</td>
-                <td>@forecast.TemperatureC</td>
-                <td>@forecast.TemperatureF</td>
-                <td>@forecast.Summary</td>
-            </tr>
-        }
-        </tbody>
-    </table>
-}
-
-@* @code {
     private string? _apiUrl = string.Empty;
     private WeatherForecast[]? _forecasts;
 
     [Inject]
     public required IWebAssemblyHostEnvironment Env { get; set; }
+    [Inject]
+    public required HttpClient Http { get; set; }
+    [Inject]
+    public required IConfiguration Conf { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -54,7 +23,7 @@ else
         // await Http.SendAsync(request);
 
         _apiUrl = Env.IsDevelopment() ? "https://localhost:8080/WeatherForecast" : Conf.GetConnectionString("ApiUrl");
-        
+
         _forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>(_apiUrl);
     }
 
@@ -68,5 +37,4 @@ else
 
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
     }
-
-} *@
+}

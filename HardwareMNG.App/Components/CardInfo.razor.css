@@ -1,0 +1,32 @@
+﻿.main {
+    --rds: 5px;
+    border: 1px solid #888;
+    border-radius: var(--rds);
+    -ms-border-radius: var(--rds);
+    padding: 0;
+    margin: 50px 5px;
+    width: 230px;
+}
+
+.title {
+    background-color: #bcbcff;
+    border-bottom: 1px solid #888;
+    border-top-left-radius: var(--rds);
+    border-top-right-radius: var(--rds);
+    -ms-border-top-left-radius: var(--rds);
+    -ms-border-top-right-radius: var(--rds);
+    font-size: 16pt;
+    font-weight: bold;
+    color: royalblue;
+    /*text-shadow: 1px 1px 2px #999;*/
+    text-align: center;
+    min-height: 40px;
+    max-height: 40px;
+    line-height: 40px;
+}
+
+.count {
+    text-align: center;
+    font-size: 26pt;
+    font-weight: bold;
+}
